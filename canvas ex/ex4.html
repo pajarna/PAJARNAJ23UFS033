@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Canvas with transparency example</title>
+<script>
+ window.onload=function() {
+ var rcanvas=document.getElementById("rCanvasTag");
+ var rcontext=rcanvas.getContext('2d');
+ rcontext.fillStyle='rgb(0,0,255)'; 
+ rcontext.fillRect(30,30,300,300); 
+ rcontext.fillStyle='rgba(0,255,0,0.5)';
+ rcontext.fillRect(60,60,300,300); 
+ rcontext.fillStyle='rgba(255,0,0,0.25)'; 
+ rcontext.fillRect(90,90,300,300); 
+ }
+</script>
+</head>
+<body>
+<canvas id="rCanvasTag" width="400" height="400"></canvas>
+</body>
+</html> 

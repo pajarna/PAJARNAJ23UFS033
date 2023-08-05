@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Draw a line</title>
+<script src="http://silverlightcanvas.appspot.com/static/slcanvas.js" ></script>
+<script type="text/javascript" src="/public/path/jooscript.js"></script>
+ <script type="text/javascript" src="/public/path/fxcanvas.js"></script>
+ <!--[if IE]><script type="text/javascript" 
+src="/public/path/flash_backend.js"></script><![endif]-->
+ <comment><script type="text/javascript"
+src="/public/path/canvas_backend.js"></script></comment>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="400"></canvas> 
+<script> 
+var canvas = document.getElementById('DemoCanvas'); 
+
+if (canvas.getContext)
+{ 
+var ctx = canvas.getContext('2d'); 
+// drawing code here 
+}
+else 
+{ 
+// canvas-unsupported code here
+}
+</script> 
+</body>
+</html>
