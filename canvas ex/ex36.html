@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Canvas - Text</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas> 
+<script>
+var canvas = document.getElementById("DemoCanvas");
+if (canvas.getContext) 
+{
+var ctx = canvas.getContext('2d');
+ ctx.font = "italic 36px Unknown Font, sans-serif";
+ ctx.strokeStyle = "red"; // set stroke color to red
+ ctx.lineWidth = "1.5"; // set stroke width to 1.5
+ for (var i = 40; i < 200; i += 40) 
+ {
+ ctx.strokeText("w3resource", i, i);
+ }
+}
+</script>
+</body> 
+</html>

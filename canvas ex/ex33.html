@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example : HTML5 Canvas Radial gradient example2 </title>
+</head>
+<body>
+<canvas id="demoCanvas" width="500" height="600"></canvas>
+<script>
+var canvas = document.getElementById("demoCanvas"); 
+if (canvas.getContext) 
+{ 
+ var ctx = canvas.getContext("2d");
+ // Create gradients
+ var g1 = ctx.createRadialGradient(45,45,10,52,50,30);
+ g1.addColorStop(0, '#A7D30C');
+ g1.addColorStop(0.9, '#019F62');
+ g1.addColorStop(1, 'rgba(1,159,98,0)');
+ var g2 = ctx.createRadialGradient(125,45,20,132,50,30);
+ g2.addColorStop(0, '#FF5F98');
+ g2.addColorStop(0.75, '#FF0188');
+ g2.addColorStop(1, 'rgba(255,1,136,0)');
+// draw shapes
+ ctx.fillStyle = g1;
+ ctx.fillRect(0,0,150,150);
+ ctx.fillStyle = g2;
+ ctx.fillRect(100,0,170,150);
+}
+</script>
+</body> 
+</html>

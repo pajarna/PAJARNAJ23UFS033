@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>HTML5 Canvas - shadow</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas> 
+<script>
+var canvas = document.getElementById("DemoCanvas");
+if (canvas.getContext) 
+{
+var ctx = canvas.getContext('2d');
+ ctx.rect(100, 40, 200, 100);
+ ctx.fillStyle = 'green';
+ ctx.shadowColor = '#898';
+ ctx.shadowBlur = 20;
+ ctx.shadowOffsetX = 20;
+ ctx.shadowOffsetY = 20;
+ ctx.fill();
+}
+</script>
+</body> 
+</html>

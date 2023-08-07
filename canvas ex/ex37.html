@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Canvas - Text</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas> 
+<script>
+var canvas = document.getElementById("DemoCanvas");if (canvas.getContext) 
+{
+var ctx = canvas.getContext('2d');
+gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+// Add the colors with fixed stops at 25% of the width. 
+ 
+gradient.addColorStop("0", "red");
+gradient.addColorStop(".25", "yellow");
+gradient.addColorStop(".50", "green");
+gradient.addColorStop(".75", "blue");
+gradient.addColorStop("1.0", "magenta");
+ // Use the gradient.
+ctx.font = "italic 700 25px Unknown Font, sans-serif";
+ctx.fillStyle = gradient;
+ for (var i = 0; i < 400; i += 50)
+ {
+ ctx.fillText("w3resource", i, i);
+ }
+}
+</script>
+</body> 
+</html>

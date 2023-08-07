@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Canvas - Text</title>
+</head>
+<body>
+    <canvas id="DemoCanvas" width="500" height="600"></canvas> 
+    <script>
+    var canvas = document.getElementById("DemoCanvas");
+    if (canvas.getContext) 
+    {
+    var ctx = canvas.getContext('2d');
+    // Create a line at the anchor point.
+    ctx.strokeStyle = "blue";
+    ctx.textAlign = "center";
+    ctx.moveTo(150, 60);
+    ctx.lineTo(150, 330);
+    ctx.stroke();
+    ctx.strokeStyle = "green";
+    ctx.font = "20px sans-serif";
+    ctx.textAlign = "start";
+    ctx.fillText("Starting position", 150, 100);
+    ctx.textAlign = "end";
+    ctx.fillText("End position", 150, 150);
+    ctx.textAlign = "left";
+    ctx.fillText("Left alignment", 150, 200);
+    ctx.textAlign = "center";
+    ctx.fillText("Center alignment", 150, 250);
+    ctx.textAlign = "right";
+    ctx.fillText("Right alignment", 150, 300);
+    }
+</script>
+</body> 
+</html>
